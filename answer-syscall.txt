@@ -1,0 +1,9 @@
+Looking at the backtrace output, which function called syscall?
+answer: usertrap() 
+
+What is the value of p->trapframe->a7 and what does that value represent? (Hint: look user/initcode.S, the first user program xv6 starts.)
+the value is 3 and this value represents SYS_exec
+
+What was the previous mode that the CPU was in?
+SPP = 0,so it's usermode
+
