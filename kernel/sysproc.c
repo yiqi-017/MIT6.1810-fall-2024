@@ -91,3 +91,16 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+//lab2:systrace实现函数
+uint64 
+sys_trace(void){
+  // printf("hello, i'm sys_trace!\n");
+  int n;
+  argint(0,&n);
+  struct proc *p = myproc();
+  p->trace_mask = n;
+  
+  // printf("The argument number is %d\n",n);
+  return 0;
+}
